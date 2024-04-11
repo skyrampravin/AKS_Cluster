@@ -1,5 +1,5 @@
 data "azurerm_resource_group" "aks_rg" {
-  name     = var.existing_resource_group_name
+  name = var.existing_resource_group_name
 }
 
 data "azurerm_resource_group" "existing-vnet-rg" {

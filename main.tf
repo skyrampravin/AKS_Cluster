@@ -27,12 +27,18 @@ resource "azurerm_kubernetes_cluster" "aks_cluster" {
     service_cidr      = var.service_cidr_range
     dns_service_ip    = var.dns_service_ip
     pod_cidr          = var.pod_cidr_range
+    # docker_bridge_cidr = var.docker_bridge_cidr_range
 
   }
 
-  identity {
-    type = "SystemAssigned"
+  service_principal {
+    client_id     = var.client_id
+    client_secret = var.client_secret
   }
+
+  #identity {
+  #  type = "SystemAssigned"
+  #}
 
   tags = {
     environment = "dev"

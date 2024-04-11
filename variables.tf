@@ -116,11 +116,25 @@ variable "pod_cidr_range" {
   description = "Pod_cidr_range"
 }
 
+#variable "docker_bridge_cidr_range" {
+#  type        = string
+#  description = "docker_bridge_cidr_range"
+#}
+
 variable "dns_service_ip" {
   type        = string
   description = "Dns servie IP"
 }
 
+variable "client_id" {
+  type        = string
+  description = "Client ID of the service principal"
+}
+
+variable "client_secret" {
+  type        = string
+  description = "Client secret of the service principal"
+}
 
 
 
